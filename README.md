@@ -7,6 +7,8 @@
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── assets/
+│   │   └── screen.png
 │   ├── components/
 │   │   └── pricingTab.vue
 │   │   └── pricingTable.vue
@@ -16,7 +18,7 @@
 │       └── index.astro
 └── package.json
 ```
-[!Screen](/screen.png)
+[!Screen](assets/screen.png)
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 

@@ -11,7 +11,7 @@ const isAnnual = ref<boolean>(true)
     <div>
         <!-- Pricing toggle -->
         <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
-            <div class="relative flex w-full p-1 bg-white dark:bg-slate-900 rounded-full">
+            <div class="relative flex w-full p-1 bg-slate-500 rounded-full">
                 <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                     <span class="absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out" :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
                 </span>
@@ -35,9 +35,10 @@ const isAnnual = ref<boolean>(true)
             <PricingTab
                 :yearly="isAnnual"
                 planName="Personal"
-                :price="{ yearly: '490', monthly: 'Gratis' }"
+                :price="{ yearly: '490€', monthly: 'Gratis' }"
                 planDescription="Durante 1 mes. Luego 49€/mes*"
-                planAnnualDescription="..."
+                planAnnualDescription="2 meses gratis por el pago adelantado."
+                plan-period-year="/año"
                 :features="[
                     '1 usuario',
                     'Importación datos clientes',
@@ -54,9 +55,12 @@ const isAnnual = ref<boolean>(true)
                 :yearly="isAnnual"
                 :popular="true"
                 planName="Pofesional"
-                :price="{ yearly: '990', monthly: '99' }"
-                planDescription="Antes por 119€"
-                planAnnualDescription="..."
+                :price="{ yearly: '990€', monthly: '99€' }"
+                planDescription="Antes por "
+                discount="199€"
+                planAnnualDescription="2 meses gratis por el pago adelantado."
+                plan-period-month="/mes"
+                plan-period-year="/año"
                 :features="[
                     'Plan básico',
                     'Múltiples usuarios (hasta 3)',
@@ -72,6 +76,8 @@ const isAnnual = ref<boolean>(true)
             <PricingTab
                 :yearly="isAnnual"
                 planName="Empresa"
+                planDescription="Sin limites!"
+                planAnnualDescription="Sin limites!"
                 :price="{ yearly: 'Consultar', monthly: 'Consultar' }"
                 :features="[
                     'Usuarios ilimitados',
