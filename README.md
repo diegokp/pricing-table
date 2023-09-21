@@ -18,7 +18,7 @@
 │       └── index.astro
 └── package.json
 ```
-[!Screen](assets/screen.png)
+[!Screen](/src/assets/screen.png)
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
