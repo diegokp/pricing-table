@@ -10,11 +10,12 @@ const isAnnual = ref<boolean>(true)
 <template>
     <div>
         <!-- Pricing toggle -->
-        <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
-            <div class="relative flex w-full p-1 bg-slate-500 rounded-full">
+        <div class="flex  flex-col justify-center items-center m-auto mb-8 lg:mb-16">
+            <div class="relative flex w-full p-1 bg-slate-500 rounded-full  max-w-[14rem]">
                 <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                     <span class="absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out" :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
                 </span>
+            
                 <button
                     class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
                     :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'"
@@ -28,6 +29,7 @@ const isAnnual = ref<boolean>(true)
                     :aria-pressed="isAnnual"
                 >Mensual</button>
             </div>
+            <span class="mt-4 text-slate-500">2 meses gratis por pago anual</span>
         </div> 
         
         <div class="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
@@ -37,7 +39,7 @@ const isAnnual = ref<boolean>(true)
                 planName="Personal"
                 :price="{ yearly: '490€', monthly: 'Gratis' }"
                 planDescription="Durante 1 mes. Luego 49€/mes*"
-                planAnnualDescription="2 meses gratis por el pago adelantado."
+                planAnnualDescription="Aprovecha nuestra oferta"
                 plan-period-year="/año"
                 :features="[
                     '1 usuario',
@@ -56,16 +58,16 @@ const isAnnual = ref<boolean>(true)
                 :popular="true"
                 planName="Pofesional"
                 :price="{ yearly: '990€', monthly: '99€' }"
+                planAnnualDescription="Aprovecha nuestra oferta"
                 planDescription="Antes por "
                 discount="199€"
-                planAnnualDescription="2 meses gratis por el pago adelantado."
                 plan-period-month="/mes"
                 plan-period-year="/año"
                 :features="[
                     'Plan básico',
                     'Múltiples usuarios (hasta 3)',
                     'Configuración 5 máquinas',
-                    'Proveedores',
+                    'Importación datos proveedores',
                     'Recibos',
                     'Compras',
                     '5 horas de formación online',
@@ -81,9 +83,8 @@ const isAnnual = ref<boolean>(true)
                 :price="{ yearly: 'Consultar', monthly: 'Consultar' }"
                 :features="[
                     'Usuarios ilimitados',
-                    'Prodctos ilimitados',
-                    'Solicitud de pedidos',
-                    'CRM',
+                    'Productos ilimitados',
+                    'Documentos personalizados',
                     'Finanzas',
                     'Informes y estadísticas',
                     'Integraciones Apps',
