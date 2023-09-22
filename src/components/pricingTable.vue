@@ -29,7 +29,7 @@ const isAnnual = ref<boolean>(true)
                     :aria-pressed="isAnnual"
                 >Mensual</button>
             </div>
-            <span class="mt-4 text-slate-500">2 meses gratis por pago anual</span>
+            <span class="mt-4 text-slate-500 text-md">2 meses gratis por el pago anual</span>
         </div> 
         
         <div class="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
